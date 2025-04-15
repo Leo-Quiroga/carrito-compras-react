@@ -1,0 +1,196 @@
+
+.card {
+    display: flex;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  .card-img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .card-title {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .card-description {
+    margin: 0 0 15px 0;
+    font-size: 0.9rem;
+    color: #666;
+    flex-grow: 1;
+  }
+  
+  .card-price {
+    margin: 0 0 15px 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #0d6efd;
+  }
+  
+  .remove-button, .add-button {
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .remove-button {
+    margin-top: auto;
+    margin-bottom: 20px;    
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .add-button {
+    margin-top: auto;
+    margin-bottom: 20px;
+    background-color: #198754;
+    color: white;
+  }
+  
+  .remove-button:hover {
+    background-color: #bb2d3b;
+  }
+  
+  .add-button:hover {
+    background-color: #157347;
+  }
+
+  /* Nuevos estilos para el modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+  }
+  
+  .product-modal {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+  }
+  
+  .close-modal:hover {
+    color: #333;
+  }
+  
+  .modal-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  
+  .modal-content {
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .modal-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .modal-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0d6efd;
+    margin-bottom: 1.5rem;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Ajustes para los botones en el modal */
+  .modal-actions .add-button,
+  .modal-actions .remove-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* Hacer que la card sea clickeable */
+  .card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Quitar la descripción de la card normal */
+  .card-description {
+    display: none;
+  }
